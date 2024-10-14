@@ -7,9 +7,9 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index(): Factory|View{
+    public function index() {
         $products = Product::get();
 
-        return view(view: 'product', data: compact(var_name: 'products'));
+        return view( 'product', compact( 'products'));
     }
 };
